@@ -65,9 +65,18 @@ Exemple:
 import numpy as np
 
 def results(list_numbers):
-    # Write here your code
-    pass
+    if type(list_numbers) is list and len(list_numbers)>0:
+        mean = np.mean(list_numbers)
+        std = np.std(list_numbers)
+        mean_result = f"Average: {mean:.2f}"
+        std_result = f"Standard deviation: {std:.2f}"
+        print(mean_result)
+        print(std_result)
+        return mean, std
+    
+    
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# results([1, 2, 10, -5, 0, 9.55, 74.825, 55, 8, 42])
+#results([1, 2, 10, -5, 0, 9.55, 74.825, 55, 8, 42])
+results([1, 2, 3, 4, 5])
