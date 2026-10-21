@@ -39,10 +39,24 @@ Exemple:
 
 '''
 
-def fibonacci(fibonacci_number):
-    # Write here your code
-    pass
+def fibonacci(fibonacci_number:int):
+    if type(fibonacci_number)is not int or fibonacci_number<0:
+        raise ValueError("The number must be int and >0")
+    else:
+        if fibonacci_number==1:
+            return 1
+        if fibonacci_number==0:
+            return 0
+        return fibonacci(fibonacci_number-1) + fibonacci(fibonacci_number-2)
+
+       
+        
+        
+   
+    
+        
+    
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(fibonacci(10))
+print(fibonacci(6))
