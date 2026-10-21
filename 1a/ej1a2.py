@@ -41,10 +41,22 @@ Exemple:
 
 '''
 
-def sum_odd_numbers(list_numbers):
-    # Write here your code
-    pass
+def sum_odd_numbers(list_numbers:list):
+    if type(list_numbers) is not list:
+        raise ValueError("input must be a list")
+    sum_odd_result=0
+    for num in list_numbers:
+        if type(num) is not int or num<0:
+            raise ValueError("The numbers must be non-negatives")
+        if num%2!=0:
+            sum_odd_result = sum_odd_result + num
+    return sum_odd_result
+            
+        
+
+    
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(sum_odd_numbers([1, 2, 3, 4, 5, 10, 21, 100]))
+
+#print(sum_odd_numbers([1.5,2,3,4,5]))
