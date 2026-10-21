@@ -64,11 +64,14 @@ Exemple:
 """
 
 import math
-
+from math import sin, radians
 def calculate_angle(angle):
-    # Write here your code
-    pass
-
+    radian_value = radians(angle)
+    sin_value = sin(radian_value)
+    round_value = round(sin_value,2)
+    return round_value
+   
+    
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(calculate_angle(270))
+print(calculate_angle(180))
