@@ -56,7 +56,6 @@ def line_graph(x, y):
     plt.ylabel("Axis Y")
     plt.grid()
     plt.plot(x,y)
-    plt.show()
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 line_graph([1, 2, 3, 4, 5], [2, 4, 6, 8, 10])
